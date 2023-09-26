@@ -1,0 +1,49 @@
+@use 'variaveis';
+
+.hero {
+    padding-top: 300px;
+    background-image: url(../images/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 90vh;
+
+    .container {
+        position: relative;
+    }
+
+    &__title {
+        line-height: 56px;
+        text-align: center;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 1024px) {
+        background-image: url(../images/hero-cel.png);
+        background-position: left;
+        height: 70vh;
+
+        .container {
+            padding: 0 3vw;
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 70px;
+        height: 80vh;
+        background-image: url(../images/hero-cel.png);
+
+        .container {
+            padding: 0 1vw;
+        }
+
+        &__title {
+            line-height: 40px;
+            background-color: #000;
+            padding-top: 16px;
+        }
+    }
+
+    
+}
